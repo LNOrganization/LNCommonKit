@@ -7,6 +7,7 @@
 //
 
 #import "LNViewController.h"
+#import <LNCommonKit/LNCommonKit.h>
 
 @interface LNViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIViewController *vc = [self currentViewController];
+    NSLog(@"%@", vc);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

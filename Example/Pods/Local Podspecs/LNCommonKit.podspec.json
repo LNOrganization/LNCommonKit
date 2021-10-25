@@ -1,0 +1,35 @@
+{
+  "name": "LNCommonKit",
+  "version": "0.1.0",
+  "summary": "A short description of LNCommonKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dongjianxiong/LNCommonKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dongjianxiong": "dongjianxiong1@kingsoft.com"
+  },
+  "source": {
+    "git": "https://github.com/dongjianxiong/LNCommonKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "public_header_files": "LNCommonKit/Classes/*.h",
+  "source_files": "LNCommonKit/Classes/*",
+  "subspecs": [
+    {
+      "name": "Foundation",
+      "source_files": "LNCommonKit/Classes/Foundation/**/*",
+      "public_header_files": "LNCommonKit/Classes/Foundation/*.h"
+    },
+    {
+      "name": "Router",
+      "source_files": "LNCommonKit/Classes/Router/**/*",
+      "public_header_files": "LNCommonKit/Classes/Router/*.h"
+    }
+  ]
+}

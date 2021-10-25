@@ -30,7 +30,17 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'LNCommonKit/Classes/**/*'
+  s.public_header_files = 'LNCommonKit/Classes/*.h'
+  s.source_files = 'LNCommonKit/Classes/*'
+  
+  s.subspec 'Foundation' do |foundation|
+    foundation.source_files = 'LNCommonKit/Classes/Foundation/**/*'
+    foundation.public_header_files = 'LNCommonKit/Classes/Foundation/*.h'
+  end
+  s.subspec 'Router' do |foundation|
+    foundation.source_files = 'LNCommonKit/Classes/Router/**/*'
+    foundation.public_header_files = 'LNCommonKit/Classes/Router/*.h'
+  end
   
   # s.resource_bundles = {
   #   'LNCommonKit' => ['LNCommonKit/Assets/*.png']

@@ -4,7 +4,7 @@ platform :ios, '9.0'
 
 target 'LNCommonKit_Example' do
   pod 'LNCommonKit', :path => '../'
-
+  pod 'YYKit'
   target 'LNCommonKit_Tests' do
     inherit! :search_paths
 
