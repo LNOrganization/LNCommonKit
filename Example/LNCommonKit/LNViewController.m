@@ -22,8 +22,6 @@
     UIViewController *vc = [self currentViewController];
     NSLog(@"%@", vc);
     
-    [[NSMutableDictionary dictionary] safe_keysSortedByValueUsingSelector:nil];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
