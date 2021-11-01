@@ -1,19 +1,19 @@
 {
   "name": "LNCommonKit",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "summary": "A short description of LNCommonKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/dongjianxiong/LNCommonKit",
+  "homepage": "https://github.com/NoNameOrganazation",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dongjianxiong": "dongjianxiong1@kingsoft.com"
+    "dongjianxiong": "jianxiong20090919@126.com"
   },
   "source": {
-    "git": "https://github.com/dongjianxiong/LNCommonKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/NoNameOrganazation/LNCommonKit.git",
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"

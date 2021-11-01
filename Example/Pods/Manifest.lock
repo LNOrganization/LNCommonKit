@@ -1,29 +1,20 @@
 PODS:
-  - LNCommonKit (0.1.0):
-    - LNCommonKit/Foundation (= 0.1.0)
-    - LNCommonKit/Router (= 0.1.0)
-  - LNCommonKit/Foundation (0.1.0)
-  - LNCommonKit/Router (0.1.0)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
+  - LNCommonKit (0.1.4):
+    - LNCommonKit/Foundation (= 0.1.4)
+    - LNCommonKit/Router (= 0.1.4)
+  - LNCommonKit/Foundation (0.1.4)
+  - LNCommonKit/Router (0.1.4)
 
 DEPENDENCIES:
   - LNCommonKit (from `../`)
-  - YYKit
-
-SPEC REPOS:
-  trunk:
-    - YYKit
 
 EXTERNAL SOURCES:
   LNCommonKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LNCommonKit: 154fa198b95198f2fcbae1d51f770aeda3dec1d3
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  LNCommonKit: 10e8900be1ecf5670ae49002a467599552414720
 
-PODFILE CHECKSUM: 2f027955e443da01ba9851ec4e3c5c746ce2927c
+PODFILE CHECKSUM: 70d38f2cd21465110aa02a1edd48ebe95abaf035
 
 COCOAPODS: 1.10.0
