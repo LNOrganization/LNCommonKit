@@ -1,9 +1,9 @@
 {
   "name": "LNCommonKit",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "summary": "A short description of LNCommonKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/NoNameOrganazation",
+  "homepage": "https://github.com/NoNameOrganazation/LNCommonKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/NoNameOrganazation/LNCommonKit.git",
-    "tag": "0.1.5"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "9.0"
@@ -21,6 +21,9 @@
   "public_header_files": "LNCommonKit/Classes/*.h",
   "source_files": "LNCommonKit/Classes/*",
   "dependencies": {
+    "AFNetworking": [
+      "4.0.1"
+    ],
     "SDWebImage": [
       "5.9.5"
     ],
@@ -34,10 +37,10 @@
       "1.4.1"
     ],
     "YYKit": [
-
+      "1.0.9"
     ],
     "JSONModel": [
-
+      "1.8.0"
     ],
     "MJRefresh": [
       "3.7.2"

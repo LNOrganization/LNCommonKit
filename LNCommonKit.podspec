@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LNCommonKit'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'A short description of LNCommonKit.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/NoNameOrganazation/LNCommonKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
 
   s.public_header_files = 'LNCommonKit/Classes/*.h'
   s.source_files = 'LNCommonKit/Classes/*'
@@ -59,6 +59,7 @@ TODO: Add long description of the pod here.
     mvc.dependency 'LNCommonKit/Network' #依赖网络模块
   end
   
+  s.dependency 'AFNetworking', '4.0.1'
   s.dependency 'SDWebImage', '5.9.5'
   s.dependency 'Masonry', '1.1.0'
   s.dependency 'CocoaAsyncSocket', '7.6.5'
