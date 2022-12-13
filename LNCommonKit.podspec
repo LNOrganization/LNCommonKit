@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'LNCommonKit'
   s.version          = '0.1.7'
-  s.summary          = 'A short description of LNCommonKit.'
+  s.summary          = '基础库组件，用于基础服务层代码'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  基础库组件，用于基础服务层代码，包括网络、日志、工具类等。还包括app所依赖的第三方库，放在这里方便统一管理
                        DESC
 
   s.homepage         = 'https://github.com/NoNameOrganazation/LNCommonKit'
@@ -50,7 +50,7 @@ TODO: Add long description of the pod here.
   s.subspec 'Network' do |net|
     net.source_files = 'LNCommonKit/Classes/Network/**/*'
     net.public_header_files = 'LNCommonKit/Classes/Network/*.h'
-    net.dependency 'AFNetworking', '4.0.1'
+#    net.dependency 'AFNetworking', '4.0.1'
   end
   
   s.subspec 'BaseMVC' do |mvc|
@@ -59,13 +59,18 @@ TODO: Add long description of the pod here.
     mvc.dependency 'LNCommonKit/Network' #依赖网络模块
   end
   
+  s.subspec 'Log' do |log|
+    log.source_files = 'LNCommonKit/Classes/Log/**/*'
+    log.public_header_files = 'LNCommonKit/Classes/Log/**/*.h'
+  end
+  
   s.dependency 'AFNetworking', '4.0.1'
-  s.dependency 'SDWebImage', '5.9.5'
-  s.dependency 'Masonry', '1.1.0'
-  s.dependency 'CocoaAsyncSocket', '7.6.5'
-  s.dependency 'Aspects', '1.4.1'
-  s.dependency 'YYKit', '1.0.9'
-  s.dependency 'JSONModel', '1.8.0'
-  s.dependency 'MJRefresh', '3.7.2'
+#  s.dependency 'SDWebImage', '5.9.5'
+#  s.dependency 'Masonry', '1.1.0'
+#  s.dependency 'CocoaAsyncSocket', '7.6.5'
+#  s.dependency 'Aspects', '1.4.1'
+#  s.dependency 'YYKit', '1.0.9'
+#  s.dependency 'JSONModel', '1.8.0'
+#  s.dependency 'MJRefresh', '3.7.2'
   
 end
