@@ -1,6 +1,6 @@
 {
   "name": "LNCommonKit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "summary": "A short description of LNCommonKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/NoNameOrganazation",
@@ -13,13 +13,36 @@
   },
   "source": {
     "git": "https://github.com/NoNameOrganazation/LNCommonKit.git",
-    "tag": "0.1.4"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "9.0"
   },
   "public_header_files": "LNCommonKit/Classes/*.h",
   "source_files": "LNCommonKit/Classes/*",
+  "dependencies": {
+    "SDWebImage": [
+      "5.9.5"
+    ],
+    "Masonry": [
+      "1.1.0"
+    ],
+    "CocoaAsyncSocket": [
+      "7.6.5"
+    ],
+    "Aspects": [
+      "1.4.1"
+    ],
+    "YYKit": [
+
+    ],
+    "JSONModel": [
+
+    ],
+    "MJRefresh": [
+      "3.7.2"
+    ]
+  },
   "subspecs": [
     {
       "name": "Foundation",
@@ -27,9 +50,34 @@
       "public_header_files": "LNCommonKit/Classes/Foundation/*.h"
     },
     {
+      "name": "CustomUIKit",
+      "source_files": "LNCommonKit/Classes/CustomUIKit/**/*",
+      "public_header_files": "LNCommonKit/Classes/CustomUIKit/*.h"
+    },
+    {
       "name": "Router",
       "source_files": "LNCommonKit/Classes/Router/**/*",
       "public_header_files": "LNCommonKit/Classes/Router/*.h"
+    },
+    {
+      "name": "Network",
+      "source_files": "LNCommonKit/Classes/Network/**/*",
+      "public_header_files": "LNCommonKit/Classes/Network/*.h",
+      "dependencies": {
+        "AFNetworking": [
+          "4.0.1"
+        ]
+      }
+    },
+    {
+      "name": "BaseMVC",
+      "source_files": "LNCommonKit/Classes/BaseMVC/**/*",
+      "public_header_files": "LNCommonKit/Classes/BaseMVC/**/*.h",
+      "dependencies": {
+        "LNCommonKit/Network": [
+
+        ]
+      }
     }
   ]
 }

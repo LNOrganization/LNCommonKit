@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    UIViewController *vc = [self currentViewController];
+    UIViewController *vc = [self ln_currentViewController];
     NSLog(@"%@", vc);
     
 }
