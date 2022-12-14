@@ -82,9 +82,9 @@ Pod::Spec.new do |s|
     log.public_header_files = 'LNCommonKit/Classes/Log/**/*.h'
   end
   
-  s.subspec 'LNConsttant' do |const|
-    const.source_files = 'LNCommonKit/Classes/LNConsttant/**/*'
-    const.public_header_files = 'LNCommonKit/Classes/LNConsttant/**/*.h'
+  s.subspec 'Consttant' do |const|
+    const.source_files = 'LNCommonKit/Classes/Consttant/**/*'
+    const.public_header_files = 'LNCommonKit/Classes/Consttant/**/*.h'
   end
   
 end

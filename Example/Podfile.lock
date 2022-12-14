@@ -23,9 +23,9 @@ PODS:
     - CocoaAsyncSocket (= 7.6.5)
     - JSONModel (= 1.8.0)
     - LNCommonKit/BaseMVC (= 0.1.7)
+    - LNCommonKit/Consttant (= 0.1.7)
     - LNCommonKit/CustomUIKit (= 0.1.7)
     - LNCommonKit/Foundation (= 0.1.7)
-    - LNCommonKit/LNConsttant (= 0.1.7)
     - LNCommonKit/Log (= 0.1.7)
     - LNCommonKit/Network (= 0.1.7)
     - LNCommonKit/Router (= 0.1.7)
@@ -42,6 +42,14 @@ PODS:
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
+  - LNCommonKit/Consttant (0.1.7):
+    - AFNetworking (= 4.0.1)
+    - Aspects (= 1.4.1)
+    - CocoaAsyncSocket (= 7.6.5)
+    - JSONModel (= 1.8.0)
+    - Masonry (= 1.1.0)
+    - MJRefresh (= 3.7.2)
+    - SDWebImage (= 5.9.5)
   - LNCommonKit/CustomUIKit (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
@@ -51,14 +59,6 @@ PODS:
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
   - LNCommonKit/Foundation (0.1.7):
-    - AFNetworking (= 4.0.1)
-    - Aspects (= 1.4.1)
-    - CocoaAsyncSocket (= 7.6.5)
-    - JSONModel (= 1.8.0)
-    - Masonry (= 1.1.0)
-    - MJRefresh (= 3.7.2)
-    - SDWebImage (= 5.9.5)
-  - LNCommonKit/LNConsttant (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
     - CocoaAsyncSocket (= 7.6.5)
@@ -118,7 +118,7 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
-  LNCommonKit: 439e9011b0fc6ad56e50051f3d303b45bf921dd2
+  LNCommonKit: 4036e865fcbc2af11abd9542dc8156cbf68fed7a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25

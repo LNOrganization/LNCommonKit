@@ -24,6 +24,9 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A366F16C2AC9BA55BB50EC35 /* Pods_LNCommonKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCA2AED14C8AB8A4FDEC73A /* Pods_LNCommonKit_Tests.framework */; };
 		A6957A3D5F4AED4FD79A6FA3 /* Pods_LNCommonKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF77BD1E75E98DB48D99BF3 /* Pods_LNCommonKit_Example.framework */; };
+		B84ECDF22949D35000FB57CA /* pod_release.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECDEF2949D35000FB57CA /* pod_release.sh */; };
+		B84ECDF32949D35000FB57CA /* pod_local_check.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECDF02949D35000FB57CA /* pod_local_check.sh */; };
+		B84ECDF42949D35000FB57CA /* pod_remote_check.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECDF12949D35000FB57CA /* pod_remote_check.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		91891CDD71B149D33C0B1B80 /* Pods-LNCommonKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNCommonKit_Example.release.xcconfig"; path = "Target Support Files/Pods-LNCommonKit_Example/Pods-LNCommonKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		93D4C4C7D55CD829572644A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ABF77BD1E75E98DB48D99BF3 /* Pods_LNCommonKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LNCommonKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84ECDEF2949D35000FB57CA /* pod_release.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_release.sh; sourceTree = "<group>"; };
+		B84ECDF02949D35000FB57CA /* pod_local_check.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_local_check.sh; sourceTree = "<group>"; };
+		B84ECDF12949D35000FB57CA /* pod_remote_check.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_remote_check.sh; sourceTree = "<group>"; };
 		C19DFCABE07C4B15F38FE536 /* Pods-LNCommonKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNCommonKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LNCommonKit_Tests/Pods-LNCommonKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F1FF6A39E9C70550166F75 /* LNCommonKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LNCommonKit.podspec; path = ../LNCommonKit.podspec; sourceTree = "<group>"; };
 		F48AC05125F4EA52A0B06F6D /* Pods-LNCommonKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNCommonKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-LNCommonKit_Tests/Pods-LNCommonKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				B84ECDEE2949D35000FB57CA /* pod_script */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for LNCommonKit */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -196,6 +203,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B84ECDEE2949D35000FB57CA /* pod_script */ = {
+			isa = PBXGroup;
+			children = (
+				B84ECDEF2949D35000FB57CA /* pod_release.sh */,
+				B84ECDF02949D35000FB57CA /* pod_local_check.sh */,
+				B84ECDF12949D35000FB57CA /* pod_remote_check.sh */,
+			);
+			name = pod_script;
+			path = ../pod_script;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +299,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84ECDF22949D35000FB57CA /* pod_release.sh in Resources */,
+				B84ECDF32949D35000FB57CA /* pod_local_check.sh in Resources */,
+				B84ECDF42949D35000FB57CA /* pod_remote_check.sh in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
