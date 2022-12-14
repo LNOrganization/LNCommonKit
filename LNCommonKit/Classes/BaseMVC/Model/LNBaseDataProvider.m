@@ -6,7 +6,6 @@
 //
 
 #import "LNBaseDataProvider.h"
-
 @interface LNBaseDataProvider ()
 
 @property(nonatomic, weak) id<LNChildDataProviderDelegate> child;
@@ -70,7 +69,7 @@
 - (LNHTTPRequest *)requestWithSuccess:(LNRequestSuccessBlock)success
                               failure:(LNRequestFailureBlock)failure
 {
-    NSLog(@"This method need to be overrite");
+    NSLog(@"This method need to be overwrite");
     return nil;
 }
 
