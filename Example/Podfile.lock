@@ -25,22 +25,23 @@ PODS:
     - LNCommonKit/BaseMVC (= 0.1.7)
     - LNCommonKit/CustomUIKit (= 0.1.7)
     - LNCommonKit/Foundation (= 0.1.7)
+    - LNCommonKit/LNConsttant (= 0.1.7)
+    - LNCommonKit/Log (= 0.1.7)
     - LNCommonKit/Network (= 0.1.7)
     - LNCommonKit/Router (= 0.1.7)
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
   - LNCommonKit/BaseMVC (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
     - CocoaAsyncSocket (= 7.6.5)
     - JSONModel (= 1.8.0)
+    - LNCommonKit/CustomUIKit
     - LNCommonKit/Network
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
   - LNCommonKit/CustomUIKit (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
@@ -49,7 +50,6 @@ PODS:
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
   - LNCommonKit/Foundation (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
@@ -58,7 +58,22 @@ PODS:
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
+  - LNCommonKit/LNConsttant (0.1.7):
+    - AFNetworking (= 4.0.1)
+    - Aspects (= 1.4.1)
+    - CocoaAsyncSocket (= 7.6.5)
+    - JSONModel (= 1.8.0)
+    - Masonry (= 1.1.0)
+    - MJRefresh (= 3.7.2)
+    - SDWebImage (= 5.9.5)
+  - LNCommonKit/Log (0.1.7):
+    - AFNetworking (= 4.0.1)
+    - Aspects (= 1.4.1)
+    - CocoaAsyncSocket (= 7.6.5)
+    - JSONModel (= 1.8.0)
+    - Masonry (= 1.1.0)
+    - MJRefresh (= 3.7.2)
+    - SDWebImage (= 5.9.5)
   - LNCommonKit/Network (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
@@ -67,7 +82,6 @@ PODS:
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
   - LNCommonKit/Router (0.1.7):
     - AFNetworking (= 4.0.1)
     - Aspects (= 1.4.1)
@@ -76,15 +90,11 @@ PODS:
     - Masonry (= 1.1.0)
     - MJRefresh (= 3.7.2)
     - SDWebImage (= 5.9.5)
-    - YYKit (= 1.0.9)
   - Masonry (1.1.0)
   - MJRefresh (3.7.2)
   - SDWebImage (5.9.5):
     - SDWebImage/Core (= 5.9.5)
   - SDWebImage/Core (5.9.5)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - LNCommonKit (from `../`)
@@ -98,7 +108,6 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - SDWebImage
-    - YYKit
 
 EXTERNAL SOURCES:
   LNCommonKit:
@@ -109,11 +118,10 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
-  LNCommonKit: 9ec490104f926138f61d64ee9910d2c626e25c4b
+  LNCommonKit: 439e9011b0fc6ad56e50051f3d303b45bf921dd2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 70d38f2cd21465110aa02a1edd48ebe95abaf035
 

@@ -7,10 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "LNRequestManager.h"
-#import "LNConsttant.h"
 
 @class LNBaseDataProvider;
 
+#define LNSafeBlockCall(Block, ...) ({ !Block ? nil : Block(__VA_ARGS__); })
 typedef void(^LNLoadSuccessBlock)(id _Nullable data);
 typedef void(^LNLoadFailureBlock)(NSString * _Nullable errMsg);
 /** provider构造器，参数provider为LNBaseDataProvider的子类对象*/
