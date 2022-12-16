@@ -1,6 +1,6 @@
 {
   "name": "LNCommonKit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "summary": "基础库组件，用于基础服务层代码",
   "description": "基础库组件，用于基础服务层代码，包括网络、日志、工具类等。还包括app所依赖的第三方库，放在这里方便统一管理",
   "homepage": "https://github.com/NoNameOrganazation/LNCommonKit",
@@ -13,33 +13,13 @@
   },
   "source": {
     "git": "https://github.com/NoNameOrganazation/LNCommonKit.git",
-    "tag": "0.1.7"
+    "tag": "0.1.8"
   },
+  "requires_arc": true,
+  "public_header_files": "LNCommonKit/Classes/*.h",
+  "source_files": "LNCommonKit/Classes/*",
   "platforms": {
     "ios": "9.0"
-  },
-  "dependencies": {
-    "AFNetworking": [
-      "4.0.1"
-    ],
-    "MJRefresh": [
-      "3.7.2"
-    ],
-    "SDWebImage": [
-      "5.9.5"
-    ],
-    "Masonry": [
-      "1.1.0"
-    ],
-    "CocoaAsyncSocket": [
-      "7.6.5"
-    ],
-    "Aspects": [
-      "1.4.1"
-    ],
-    "JSONModel": [
-      "1.8.0"
-    ]
   },
   "frameworks": [
     "UIKit",
@@ -53,9 +33,6 @@
     "OTHER_LDFLAGS": "-ObjC",
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   },
-  "requires_arc": true,
-  "public_header_files": "LNCommonKit/Classes/*.h",
-  "source_files": "LNCommonKit/Classes/*",
   "subspecs": [
     {
       "name": "Foundation",
@@ -65,7 +42,14 @@
     {
       "name": "CustomUIKit",
       "source_files": "LNCommonKit/Classes/CustomUIKit/**/*",
-      "public_header_files": "LNCommonKit/Classes/CustomUIKit/*.h"
+      "public_header_files": "LNCommonKit/Classes/CustomUIKit/*.h",
+      "subspecs": [
+        {
+          "name": "ImgLoopScroll",
+          "source_files": "LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/**/*",
+          "public_header_files": "LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/*.h"
+        }
+      ]
     },
     {
       "name": "Router",
@@ -74,8 +58,13 @@
     },
     {
       "name": "Network",
-      "source_files": "LNCommonKit/Classes/Network/**/*",
-      "public_header_files": "LNCommonKit/Classes/Network/*.h"
+      "source_files": "LNCommonKit/Classes/Network/*",
+      "public_header_files": "LNCommonKit/Classes/Network/*.h",
+      "dependencies": {
+        "AFNetworking": [
+          "~>4.0.1"
+        ]
+      }
     },
     {
       "name": "BaseMVC",
@@ -87,6 +76,9 @@
         ],
         "LNCommonKit/CustomUIKit": [
 
+        ],
+        "MJRefresh": [
+          "~>3.7.2"
         ]
       }
     },

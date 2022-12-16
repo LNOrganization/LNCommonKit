@@ -7,6 +7,7 @@
 
 #import "LNNetworkManager.h"
 #import <objc/runtime.h>
+#import "LNHTTPClient.h"
 
 #define LN_NET_SAFE_BLOCK(Block, ...) ({ !Block ? nil : Block(__VA_ARGS__); })
 
@@ -58,15 +59,12 @@ static void *kLNRequestIDBindingKey = &kLNRequestIDBindingKey;
     if (self) {
         _requests = [[NSMutableDictionary alloc] init];
         _requestQueue = dispatch_queue_create("com.Lenny.LNNetworkManager.request.queue", DISPATCH_QUEUE_CONCURRENT);
+        _httpClient = [[LNHTTPClient alloc] init];
     }
     return self;
 }
 
 
-- (void)setupClient
-{
-    _httpClient = [[NSClassFromString(@"LNHTTPClient") alloc] init];
-}
 
 #pragma mark - public method
 

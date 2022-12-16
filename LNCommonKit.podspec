@@ -54,11 +54,7 @@ Pod::Spec.new do |s|
   s.subspec 'Network' do |net|
     net.source_files = 'LNCommonKit/Classes/Network/*'
     net.public_header_files = 'LNCommonKit/Classes/Network/*.h'
-    net.subspec 'AFNetworkingClient' do |af|
-      af.source_files = 'LNCommonKit/Classes/Network/AFNetworkingClient/**/*'
-      af.public_header_files = 'LNCommonKit/Classes/Network/AFNetworkingClient/*.h'
-      af.dependency 'AFNetworking', '~>4.0.1'
-    end
+    net.dependency 'AFNetworking', '~>4.0.1'
   end
 #
   s.subspec 'BaseMVC' do |mvc|
