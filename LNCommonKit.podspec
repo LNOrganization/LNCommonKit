@@ -28,24 +28,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/NoNameOrganazation/LNCommonKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
-  
-  #LNCommonKit自身也会依赖的
-  s.dependency 'AFNetworking', '4.0.1'
-  s.dependency 'MJRefresh', '3.7.2'
-  
-  #LNCommonKit自身没有依赖的, 提供主APP和其他组件依赖
-  s.dependency 'SDWebImage', '5.9.5'
-  s.dependency 'Masonry', '1.1.0'
-  s.dependency 'CocoaAsyncSocket', '7.6.5'
-  s.dependency 'Aspects', '1.4.1'
-  s.dependency 'JSONModel', '1.8.0'
-
-
-  s.frameworks = 'UIKit', 'Foundation'
-  s.library = 'z', 'c++'
-  s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'}
-
   s.requires_arc = true
   
   s.public_header_files = 'LNCommonKit/Classes/*.h'
@@ -58,6 +40,10 @@ Pod::Spec.new do |s|
   s.subspec 'CustomUIKit' do |ui|
     ui.source_files = 'LNCommonKit/Classes/CustomUIKit/**/*'
     ui.public_header_files = 'LNCommonKit/Classes/CustomUIKit/*.h'
+    ui.subspec 'ImgLoopScroll' do |ils|
+      ils.source_files = 'LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/**/*'
+      ils.public_header_files = 'LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/*.h'
+    end
   end
 
   s.subspec 'Router' do |router|
@@ -66,8 +52,13 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Network' do |net|
-    net.source_files = 'LNCommonKit/Classes/Network/**/*'
+    net.source_files = 'LNCommonKit/Classes/Network/*'
     net.public_header_files = 'LNCommonKit/Classes/Network/*.h'
+    net.subspec 'AFNetworkingClient' do |af|
+      af.source_files = 'LNCommonKit/Classes/Network/AFNetworkingClient/**/*'
+      af.public_header_files = 'LNCommonKit/Classes/Network/AFNetworkingClient/*.h'
+      af.dependency 'AFNetworking', '~>4.0.1'
+    end
   end
 #
   s.subspec 'BaseMVC' do |mvc|
@@ -75,6 +66,7 @@ Pod::Spec.new do |s|
     mvc.public_header_files = 'LNCommonKit/Classes/BaseMVC/**/*.h'
     mvc.dependency 'LNCommonKit/Network' #依赖网络模块
     mvc.dependency 'LNCommonKit/CustomUIKit' #依赖网络模块
+    mvc.dependency 'MJRefresh', '~>3.7.2'
   end
   
   s.subspec 'Log' do |log|
@@ -87,4 +79,10 @@ Pod::Spec.new do |s|
     const.public_header_files = 'LNCommonKit/Classes/Consttant/**/*.h'
   end
   
+  s.ios.deployment_target = '9.0'
+
+  s.frameworks = 'UIKit', 'Foundation'
+  s.library = 'z', 'c++'
+  s.xcconfig = {'OTHER_LDFLAGS' => '-ObjC', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'}
+
 end

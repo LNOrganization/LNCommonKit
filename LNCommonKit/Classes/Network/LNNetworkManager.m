@@ -1,12 +1,11 @@
 //
-//  LNRequestManager.m
-//  LNFeedModule
+//  LNNetworkManager.m
+//  LNCommonKit
 //
 //  Created by Lenny on 2022/12/3.
 //
 
-#import "LNRequestManager.h"
-#import "LNHTTPClient.h"
+#import "LNNetworkManager.h"
 #import <objc/runtime.h>
 
 #define LN_NET_SAFE_BLOCK(Block, ...) ({ !Block ? nil : Block(__VA_ARGS__); })
@@ -33,7 +32,7 @@ static void *kLNRequestIDBindingKey = &kLNRequestIDBindingKey;
 
 @end
 
-@interface LNRequestManager ()
+@interface LNNetworkManager ()
 
 
 @property(nonatomic, strong) NSMutableDictionary *requests;
@@ -41,11 +40,11 @@ static void *kLNRequestIDBindingKey = &kLNRequestIDBindingKey;
 
 @end
 
-@implementation LNRequestManager
+@implementation LNNetworkManager
 
-+ (LNRequestManager *)sharedInstance
++ (LNNetworkManager *)sharedInstance
 {
-    static LNRequestManager *instance = nil;
+    static LNNetworkManager *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[[self class] alloc] init];
@@ -58,13 +57,16 @@ static void *kLNRequestIDBindingKey = &kLNRequestIDBindingKey;
     self = [super init];
     if (self) {
         _requests = [[NSMutableDictionary alloc] init];
-        _requestQueue = dispatch_queue_create("com.Lenny.LNRequestManager.request.queue", DISPATCH_QUEUE_CONCURRENT);
-        _requestConfig =  [LNRequestConfig sharedInstance];
-        _httpClient = (id)[LNHTTPClient client];        
+        _requestQueue = dispatch_queue_create("com.Lenny.LNNetworkManager.request.queue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
 
+
+- (void)setupClient
+{
+    _httpClient = [[NSClassFromString(@"LNHTTPClient") alloc] init];
+}
 
 #pragma mark - public method
 
