@@ -6,7 +6,6 @@
 //
 
 #import "LNNetworkConfig.h"
-#import "LNNetworkManager.h"
 
 NSString *LNRequestSerializationErrorDomain = @"LNRequestSerializationErrorDomain";
 NSString *LNResponseSerializationErrorDomain = @"LNResponseSerializationErrorDomain";
@@ -103,14 +102,6 @@ NSString *LNURLPathWithBaseURLAppendPath(NSString *host, NSString *path)
     return _commonUserInfo;
 }
 
-- (void)configNetWorkManager
-{
-    
-}
 
-+(void)load
-{
-    [LNNetworkManager sharedInstance].httpClient = (id)[self sharedInstance];
-}
 
 @end

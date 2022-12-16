@@ -7,7 +7,7 @@
 
 #import "LNAFNetworkingHTTPClient.h"
 #import <AFNetworking/AFNetworking.h>
-#import "LNHTTPRequest.h"
+#import <LNCommonKit/LNNetworkManager.h>
 
 @interface LNAFNetworkingHTTPClient ()
 

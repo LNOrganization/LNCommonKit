@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) id<LNNetworkConfigAdapter> requestConfig;
 
+/** category or child class to overwrite*/
+- (void)setupHttpClient;
+
 @end
 
 NS_ASSUME_NONNULL_END

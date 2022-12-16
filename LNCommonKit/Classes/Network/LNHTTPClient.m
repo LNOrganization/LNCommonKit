@@ -36,7 +36,13 @@
                                     completion:(LNRequestCompletionBlock)completion
 {
     NSMutableURLRequest *httpRequest = [self _requestWithAdapter:requestAdapter completion:completion];
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:httpRequest];
+
+    if(!httpRequest){
+        return nil;
+    }
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:httpRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        [self handleResponse:response data:data error:error request:requestAdapter completion:completion];
+    }];
     return dataTask;
 }
 
@@ -50,7 +56,15 @@
             [httpRequest addValue:obj forHTTPHeaderField:key];
         }];
     }
-
+    
+    if(!httpRequest){
+        NSDictionary *userInfo = @{NSLocalizedFailureReasonErrorKey: NSLocalizedStringFromTable(@"httpRequest is nil", NSStringFromClass([self class]), nil)};
+       NSError *error = [[NSError alloc] initWithDomain:LNRequestSerializationErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:userInfo];
+        if (completion) {
+            completion(nil, error);
+        }
+        return nil;
+    }
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:httpRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         [self handleResponse:response data:data error:error request:requestAdapter completion:completion];
     }];
@@ -165,6 +179,7 @@
     NSURL *url = [NSURL URLWithString:requestAdapter.urlPath];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = [requestAdapter method];
+    request.timeoutInterval = requestAdapter.timeoutInterval;
     //设置请求实体
     NSMutableData *body = [NSMutableData data];
     NSData *paramsData = [NSJSONSerialization dataWithJSONObject:[requestAdapter parameters] options:NSJSONWritingPrettyPrinted error:nil];
@@ -198,7 +213,7 @@
         [body appendData:multiData.fileData];
         [body appendData:[self getDataWithString:@"\r\n"]];
     }
-
+    
     //参数结束
     [body appendData:[self getDataWithString:@"--BOUNDARY--\r\n"]];
     request.HTTPBody = body;
