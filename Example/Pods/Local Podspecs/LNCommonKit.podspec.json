@@ -1,6 +1,6 @@
 {
   "name": "LNCommonKit",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "summary": "基础库组件，用于基础服务层代码",
   "description": "基础库组件，用于基础服务层代码，包括网络、日志、工具类等。还包括app所依赖的第三方库，放在这里方便统一管理",
   "homepage": "https://github.com/LNOrganization/LNCommonKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LNOrganization/LNCommonKit.git",
-    "tag": "1.0.2"
+    "tag": "1.0.4"
   },
   "requires_arc": true,
   "public_header_files": "LNCommonKit/Classes/*.h",
@@ -145,8 +145,8 @@
         },
         {
           "name": "CollectionVC",
-          "source_files": "LNCommonKit/Classes/Base/TableVC/*",
-          "public_header_files": "LNCommonKit/Classes/Base/TableVC/*.h",
+          "source_files": "LNCommonKit/Classes/Base/CollectionVC/*",
+          "public_header_files": "LNCommonKit/Classes/Base/CollectionVC/*.h",
           "dependencies": {
             "LNCommonKit/Base/BaseVC": [
 

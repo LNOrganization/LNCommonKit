@@ -8,8 +8,9 @@
 
 
 #import <Foundation/Foundation.h>
+#import <LNCommonKit/LNNetworkConst.h>
 
-@interface LNAFNetworkingHTTPClient : NSObject
+@interface LNAFNetworkingHTTPClient : NSObject<LNHTTPClientDelegate>
 
 + (instancetype)client;
 
