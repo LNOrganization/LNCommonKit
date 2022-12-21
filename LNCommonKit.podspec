@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LNCommonKit'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = '基础库组件，用于基础服务层代码'
 
 # This description is used to generate tags and improve search results.
