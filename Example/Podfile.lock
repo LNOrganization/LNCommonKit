@@ -14,27 +14,56 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - LNCommonKit (0.1.8):
-    - LNCommonKit/BaseMVC (= 0.1.8)
-    - LNCommonKit/Consttant (= 0.1.8)
-    - LNCommonKit/CustomUIKit (= 0.1.8)
-    - LNCommonKit/Foundation (= 0.1.8)
-    - LNCommonKit/Log (= 0.1.8)
-    - LNCommonKit/Network (= 0.1.8)
-    - LNCommonKit/Router (= 0.1.8)
-  - LNCommonKit/BaseMVC (0.1.8):
+  - JSONModel (1.8.0)
+  - LNCommonKit (1.0.1):
+    - LNCommonKit/Base (= 1.0.1)
+    - LNCommonKit/Consttant (= 1.0.1)
+    - LNCommonKit/CustomUIKit (= 1.0.1)
+    - LNCommonKit/Foundation (= 1.0.1)
+    - LNCommonKit/Log (= 1.0.1)
+    - LNCommonKit/Network (= 1.0.1)
+    - LNCommonKit/Router (= 1.0.1)
+  - LNCommonKit/Base (1.0.1):
+    - LNCommonKit/Base/BaseVC (= 1.0.1)
+    - LNCommonKit/Base/CollectionVC (= 1.0.1)
+    - LNCommonKit/Base/Core (= 1.0.1)
+    - LNCommonKit/Base/DataModel (= 1.0.1)
+    - LNCommonKit/Base/Provider (= 1.0.1)
+    - LNCommonKit/Base/TableVC (= 1.0.1)
+  - LNCommonKit/Base/BaseVC (1.0.1):
     - LNCommonKit/CustomUIKit
-    - LNCommonKit/Network
+  - LNCommonKit/Base/CollectionVC (1.0.1):
+    - LNCommonKit/Base/BaseVC
+    - LNCommonKit/Base/Core
     - MJRefresh (~> 3.7.2)
-  - LNCommonKit/Consttant (0.1.8)
-  - LNCommonKit/CustomUIKit (0.1.8):
-    - LNCommonKit/CustomUIKit/ImgLoopScroll (= 0.1.8)
-  - LNCommonKit/CustomUIKit/ImgLoopScroll (0.1.8)
-  - LNCommonKit/Foundation (0.1.8)
-  - LNCommonKit/Log (0.1.8)
-  - LNCommonKit/Network (0.1.8):
+  - LNCommonKit/Base/Core (1.0.1)
+  - LNCommonKit/Base/DataModel (1.0.1):
+    - JSONModel (~> 1.8.0)
+  - LNCommonKit/Base/Provider (1.0.1):
+    - LNCommonKit/Base/Core
+    - LNCommonKit/Base/DataModel
+    - LNCommonKit/Network
+  - LNCommonKit/Base/TableVC (1.0.1):
+    - LNCommonKit/Base/BaseVC
+    - LNCommonKit/Base/Core
+    - MJRefresh (~> 3.7.2)
+  - LNCommonKit/Consttant (1.0.1)
+  - LNCommonKit/CustomUIKit (1.0.1):
+    - LNCommonKit/CustomUIKit/ImgLoopScroll (= 1.0.1)
+  - LNCommonKit/CustomUIKit/ImgLoopScroll (1.0.1)
+  - LNCommonKit/Foundation (1.0.1)
+  - LNCommonKit/Log (1.0.1)
+  - LNCommonKit/Network (1.0.1):
+    - LNCommonKit/Network/AFHTTPClient (= 1.0.1)
+    - LNCommonKit/Network/Core (= 1.0.1)
+    - LNCommonKit/Network/LNHTTPClient (= 1.0.1)
+  - LNCommonKit/Network/AFHTTPClient (1.0.1):
     - AFNetworking (~> 4.0.1)
-  - LNCommonKit/Router (0.1.8)
+    - LNCommonKit/Network/Core
+  - LNCommonKit/Network/Core (1.0.1)
+  - LNCommonKit/Network/LNHTTPClient (1.0.1):
+    - LNCommonKit/Network/Core
+  - LNCommonKit/Router (1.0.1)
   - MJRefresh (3.7.2)
 
 DEPENDENCIES:
@@ -43,6 +72,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - JSONModel
     - MJRefresh
 
 EXTERNAL SOURCES:
@@ -51,7 +81,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  LNCommonKit: dc44986d5f6a5f9b337f8e98fa9886cfbe1d7d81
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  LNCommonKit: e945d40fa69b433b3c31272630495c39c9795c48
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
 
 PODFILE CHECKSUM: 70d38f2cd21465110aa02a1edd48ebe95abaf035

@@ -5,5 +5,5 @@ export LANG=en_US.UTF-8
 #git push origin
 #git tag $version
 #git push origin $version
-pod repo push nonameorganazation --use-libraries --allow-warnings --verbose
+pod repo push LNOrganization --use-libraries --allow-warnings --verbose
 

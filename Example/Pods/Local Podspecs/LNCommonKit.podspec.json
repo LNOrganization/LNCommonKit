@@ -1,9 +1,9 @@
 {
   "name": "LNCommonKit",
-  "version": "0.1.8",
+  "version": "1.0.1",
   "summary": "基础库组件，用于基础服务层代码",
   "description": "基础库组件，用于基础服务层代码，包括网络、日志、工具类等。还包括app所依赖的第三方库，放在这里方便统一管理",
-  "homepage": "https://github.com/NoNameOrganazation/LNCommonKit",
+  "homepage": "https://github.com/LNOrganization/LNCommonKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "dongjianxiong": "jianxiong20090919@126.com"
   },
   "source": {
-    "git": "https://github.com/NoNameOrganazation/LNCommonKit.git",
-    "tag": "0.1.8"
+    "git": "https://github.com/LNOrganization/LNCommonKit.git",
+    "tag": "1.0.1"
   },
   "requires_arc": true,
   "public_header_files": "LNCommonKit/Classes/*.h",
@@ -58,29 +58,118 @@
     },
     {
       "name": "Network",
-      "source_files": "LNCommonKit/Classes/Network/*",
-      "public_header_files": "LNCommonKit/Classes/Network/*.h",
-      "dependencies": {
-        "AFNetworking": [
-          "~>4.0.1"
-        ]
-      }
+      "source_files": "LNCommonKit/Classes/Network/**/*",
+      "public_header_files": "LNCommonKit/Classes/Network/**/*.h",
+      "subspecs": [
+        {
+          "name": "Core",
+          "source_files": "LNCommonKit/Classes/Network/Core/*",
+          "public_header_files": "LNCommonKit/Classes/Network/Core/*.h"
+        },
+        {
+          "name": "LNHTTPClient",
+          "source_files": "LNCommonKit/Classes/Network/LNHTTPClient/*",
+          "public_header_files": "LNCommonKit/Classes/Network/LNHTTPClient/*.h",
+          "dependencies": {
+            "LNCommonKit/Network/Core": [
+
+            ]
+          }
+        },
+        {
+          "name": "AFHTTPClient",
+          "source_files": "LNCommonKit/Classes/Network/AFHTTPClient/*",
+          "public_header_files": "LNCommonKit/Classes/Network/AFHTTPClient/*.h",
+          "dependencies": {
+            "LNCommonKit/Network/Core": [
+
+            ],
+            "AFNetworking": [
+              "~>4.0.1"
+            ]
+          }
+        }
+      ]
     },
     {
-      "name": "BaseMVC",
-      "source_files": "LNCommonKit/Classes/BaseMVC/**/*",
-      "public_header_files": "LNCommonKit/Classes/BaseMVC/**/*.h",
-      "dependencies": {
-        "LNCommonKit/Network": [
+      "name": "Base",
+      "source_files": "LNCommonKit/Classes/Base/**/*",
+      "public_header_files": "LNCommonKit/Classes/Base/**/*.h",
+      "subspecs": [
+        {
+          "name": "BaseVC",
+          "source_files": "LNCommonKit/Classes/BaseMVC/BaseVC/*",
+          "public_header_files": "LNCommonKit/Classes/BaseMVC/BaseVC/*.h",
+          "dependencies": {
+            "LNCommonKit/CustomUIKit": [
 
-        ],
-        "LNCommonKit/CustomUIKit": [
+            ]
+          }
+        },
+        {
+          "name": "Core",
+          "source_files": "LNCommonKit/Classes/BaseMVC/Core/*",
+          "public_header_files": "LNCommonKit/Classes/BaseMVC/Core/*.h"
+        },
+        {
+          "name": "TableVC",
+          "source_files": "LNCommonKit/Classes/BaseMVC/TableVC/*",
+          "public_header_files": "LNCommonKit/Classes/BaseMVC/TableVC/*.h",
+          "dependencies": {
+            "LNCommonKit/Base/BaseVC": [
 
-        ],
-        "MJRefresh": [
-          "~>3.7.2"
-        ]
-      }
+            ],
+            "LNCommonKit/Base/Core": [
+
+            ],
+            "MJRefresh": [
+              "~>3.7.2"
+            ]
+          }
+        },
+        {
+          "name": "CollectionVC",
+          "source_files": "LNCommonKit/Classes/BaseMVC/TableVC/*",
+          "public_header_files": "LNCommonKit/Classes/BaseMVC/TableVC/*.h",
+          "dependencies": {
+            "LNCommonKit/Base/BaseVC": [
+
+            ],
+            "LNCommonKit/Base/Core": [
+
+            ],
+            "MJRefresh": [
+              "~>3.7.2"
+            ]
+          }
+        },
+        {
+          "name": "DataModel",
+          "source_files": "LNCommonKit/Classes/BaseMVC/DataModel/*",
+          "public_header_files": "LNCommonKit/Classes/BaseMVC/DataModel/*.h",
+          "dependencies": {
+            "JSONModel": [
+              "~>1.8.0"
+            ]
+          }
+        },
+        {
+          "name": "Provider",
+          "source_files": "LNCommonKit/Classes/Network/Provider/*",
+          "public_header_files": "LNCommonKit/Classes/Network/Provider/*.h",
+          "dependencies": {
+            "LNCommonKit/Base/Core": [
+
+            ],
+            "LNCommonKit/Base/DataModel": [
+
+            ],
+            "LNCommonKit/Network": [
+
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Log",
