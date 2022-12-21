@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LNCommonKit'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = '基础库组件，用于基础服务层代码'
 
 # This description is used to generate tags and improve search results.
@@ -38,22 +38,21 @@ Pod::Spec.new do |s|
     foundation.public_header_files = 'LNCommonKit/Classes/Foundation/*.h'
   end
   s.subspec 'CustomUIKit' do |ui|
-    ui.source_files = 'LNCommonKit/Classes/CustomUIKit/**/*'
+    ui.source_files = 'LNCommonKit/Classes/CustomUIKit/*'
     ui.public_header_files = 'LNCommonKit/Classes/CustomUIKit/*.h'
-    ui.subspec 'ImgLoopScroll' do |ils|
-      ils.source_files = 'LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/**/*'
-      ils.public_header_files = 'LNCommonKit/Classes/CustomUIKit/ImgLoopScroll/*.h'
-    end
   end
-
+  s.subspec 'ImgLoopScroll' do |ils|
+    ils.source_files = 'LNCommonKit/Classes/ImgLoopScroll/*'
+    ils.public_header_files = 'LNCommonKit/Classes/ImgLoopScroll/*.h'
+  end
   s.subspec 'Router' do |router|
     router.source_files = 'LNCommonKit/Classes/Router/**/*'
     router.public_header_files = 'LNCommonKit/Classes/Router/*.h'
   end
   
   s.subspec 'Network' do |net|
-    net.source_files = 'LNCommonKit/Classes/Network/**/*'
-    net.public_header_files = 'LNCommonKit/Classes/Network/**/*.h'
+    net.source_files = 'LNCommonKit/Classes/Network/*'
+    net.public_header_files = 'LNCommonKit/Classes/Network/*.h'
     net.subspec 'Core' do |core|
       core.source_files = 'LNCommonKit/Classes/Network/Core/*'
       core.public_header_files = 'LNCommonKit/Classes/Network/Core/*.h'
@@ -82,8 +81,8 @@ Pod::Spec.new do |s|
   end
 #
   s.subspec 'Base' do |base|
-    base.source_files = 'LNCommonKit/Classes/Base/**/*'
-    base.public_header_files = 'LNCommonKit/Classes/Base/**/*.h'
+    base.source_files = 'LNCommonKit/Classes/Base/*'
+    base.public_header_files = 'LNCommonKit/Classes/Base/*.h'
     base.subspec 'BaseVC' do |vc|
       vc.source_files = 'LNCommonKit/Classes/Base/BaseVC/*'
       vc.public_header_files = 'LNCommonKit/Classes/Base/BaseVC/*.h'
