@@ -100,8 +100,8 @@ Pod::Spec.new do |s|
       t.dependency 'MJRefresh', '~>3.7.2'
     end
     base.subspec 'CollectionVC' do |c|
-      c.source_files = 'LNCommonKit/Classes/Base/TableVC/*'
-      c.public_header_files = 'LNCommonKit/Classes/Base/TableVC/*.h'
+      c.source_files = 'LNCommonKit/Classes/Base/CollectionVC/*'
+      c.public_header_files = 'LNCommonKit/Classes/Base/CollectionVC/*.h'
       c.dependency 'LNCommonKit/Base/BaseVC'
       c.dependency 'LNCommonKit/Base/Core'
       c.dependency 'MJRefresh', '~>3.7.2'
