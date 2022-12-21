@@ -6,7 +6,9 @@
 //
 
 #import "LNBaseDataProvider.h"
-#import <LNCommonKit/LNCommonKit.h>
+#import "LNConsttant.h"
+#import "LNNetworkManager.h"
+#import "LNResponse.h"
 
 @interface LNBaseDataProvider ()
 

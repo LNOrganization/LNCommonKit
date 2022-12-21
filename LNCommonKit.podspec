@@ -70,46 +70,6 @@ Pod::Spec.new do |s|
       af.dependency 'AFNetworking', '~>4.0.1'
     end
   end
-#
-  s.subspec 'Base' do |base|
-    base.source_files = 'LNCommonKit/Classes/Base/**/*'
-    base.public_header_files = 'LNCommonKit/Classes/Base/**/*.h'
-    base.subspec 'BaseVC' do |vc|
-      vc.source_files = 'LNCommonKit/Classes/BaseMVC/BaseVC/*'
-      vc.public_header_files = 'LNCommonKit/Classes/BaseMVC/BaseVC/*.h'
-      vc.dependency 'LNCommonKit/CustomUIKit' #依赖网络模块
-    end
-    base.subspec 'Core' do |core|
-      core.source_files = 'LNCommonKit/Classes/BaseMVC/Core/*'
-      core.public_header_files = 'LNCommonKit/Classes/BaseMVC/Core/*.h'
-    end
-    base.subspec 'TableVC' do |t|
-      t.source_files = 'LNCommonKit/Classes/BaseMVC/TableVC/*'
-      t.public_header_files = 'LNCommonKit/Classes/BaseMVC/TableVC/*.h'
-      t.dependency 'LNCommonKit/Base/BaseVC'
-      t.dependency 'LNCommonKit/Base/Core'
-      t.dependency 'MJRefresh', '~>3.7.2'
-    end
-    base.subspec 'CollectionVC' do |c|
-      c.source_files = 'LNCommonKit/Classes/BaseMVC/TableVC/*'
-      c.public_header_files = 'LNCommonKit/Classes/BaseMVC/TableVC/*.h'
-      c.dependency 'LNCommonKit/Base/BaseVC'
-      c.dependency 'LNCommonKit/Base/Core'
-      c.dependency 'MJRefresh', '~>3.7.2'
-    end
-    base.subspec 'DataModel' do |d|
-      d.source_files = 'LNCommonKit/Classes/BaseMVC/DataModel/*'
-      d.public_header_files = 'LNCommonKit/Classes/BaseMVC/DataModel/*.h'
-      d.dependency 'JSONModel', '~>1.8.0'
-    end
-    base.subspec 'Provider' do |p|
-      p.source_files = 'LNCommonKit/Classes/Network/Provider/*'
-      p.public_header_files = 'LNCommonKit/Classes/Network/Provider/*.h'
-      p.dependency 'LNCommonKit/Base/Core'
-      p.dependency 'LNCommonKit/Base/DataModel'
-      p.dependency 'LNCommonKit/Network' #依赖网络模块
-    end
-  end
   
   s.subspec 'Log' do |log|
     log.source_files = 'LNCommonKit/Classes/Log/**/*'
@@ -119,6 +79,48 @@ Pod::Spec.new do |s|
   s.subspec 'Consttant' do |const|
     const.source_files = 'LNCommonKit/Classes/Consttant/**/*'
     const.public_header_files = 'LNCommonKit/Classes/Consttant/**/*.h'
+  end
+#
+  s.subspec 'Base' do |base|
+    base.source_files = 'LNCommonKit/Classes/Base/**/*'
+    base.public_header_files = 'LNCommonKit/Classes/Base/**/*.h'
+    base.subspec 'BaseVC' do |vc|
+      vc.source_files = 'LNCommonKit/Classes/Base/BaseVC/*'
+      vc.public_header_files = 'LNCommonKit/Classes/Base/BaseVC/*.h'
+      vc.dependency 'LNCommonKit/CustomUIKit' #依赖网络模块
+    end
+    base.subspec 'Core' do |core|
+      core.source_files = 'LNCommonKit/Classes/Base/Core/*'
+      core.public_header_files = 'LNCommonKit/Classes/Base/Core/*.h'
+    end
+    base.subspec 'TableVC' do |t|
+      t.source_files = 'LNCommonKit/Classes/Base/TableVC/*'
+      t.public_header_files = 'LNCommonKit/Classes/Base/TableVC/*.h'
+      t.dependency 'LNCommonKit/Base/BaseVC'
+      t.dependency 'LNCommonKit/Base/Core'
+      t.dependency 'MJRefresh', '~>3.7.2'
+    end
+    base.subspec 'CollectionVC' do |c|
+      c.source_files = 'LNCommonKit/Classes/Base/TableVC/*'
+      c.public_header_files = 'LNCommonKit/Classes/Base/TableVC/*.h'
+      c.dependency 'LNCommonKit/Base/BaseVC'
+      c.dependency 'LNCommonKit/Base/Core'
+      c.dependency 'MJRefresh', '~>3.7.2'
+    end
+    base.subspec 'DataModel' do |d|
+      d.source_files = 'LNCommonKit/Classes/Base/DataModel/*'
+      d.public_header_files = 'LNCommonKit/Classes/Base/DataModel/*.h'
+      d.dependency 'JSONModel', '~>1.8.0'
+    end
+    base.subspec 'Provider' do |p|
+      p.source_files = 'LNCommonKit/Classes/Base/Provider/*'
+      p.public_header_files = 'LNCommonKit/Classes/Base/Provider/*.h'
+      p.dependency 'LNCommonKit/Base/Core'
+      p.dependency 'LNCommonKit/Base/DataModel'
+      p.dependency 'LNCommonKit/Network' #依赖网络模块
+    end
+    base.dependency 'LNCommonKit/Log'
+    base.dependency 'LNCommonKit/Consttant'
   end
   
   s.ios.deployment_target = '9.0'

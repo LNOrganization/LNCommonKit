@@ -6,7 +6,9 @@
 //
 
 #import "LNBaseListDataProvider.h"
-
+#import "LNConsttant.h"
+#import "LNNetworkManager.h"
+#import "LNResponse.h"
 
 @interface LNBaseListDataProvider ()
 
@@ -15,8 +17,8 @@
 @property(nonatomic, assign, readwrite) NSInteger            currentPage;
 @property(nonatomic, strong, readwrite) NSMutableArray       *dataList;
 @property(nonatomic, assign, readwrite) LNListDataLoadStatus status;
-@property(nonatomic, strong, readwrite) NSMutableDictionary   *dataDict;
-@property(nonatomic, strong, readwrite) NSMutableOrderedSet   *sectionsOrderSet;
+@property(nonatomic, strong) NSMutableDictionary  *dataDict;
+@property(nonatomic, strong) NSMutableOrderedSet   *sectionsOrderSet;
 
 @end
 

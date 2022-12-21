@@ -6,8 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LNNetworkManager.h"
-#import "LNResponse.h"
 #import "LNDataProviderAdaptor.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +19,7 @@ typedef void (^LNDataProviderCreator)(id _Nonnull provider);
 typedef void(^LNDataLoadCompletionBlock)(BOOL isSucceed,  id _Nullable data, NSString *errMsg);
 
 
-
+@class LNHTTPRequest;
 @interface LNBaseDataProvider : NSObject<LNDataProviderAdaptor>
 
 @property(nonatomic, strong) LNHTTPRequest *request;

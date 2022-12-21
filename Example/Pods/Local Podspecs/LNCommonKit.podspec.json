@@ -98,8 +98,8 @@
       "subspecs": [
         {
           "name": "BaseVC",
-          "source_files": "LNCommonKit/Classes/BaseMVC/BaseVC/*",
-          "public_header_files": "LNCommonKit/Classes/BaseMVC/BaseVC/*.h",
+          "source_files": "LNCommonKit/Classes/Base/BaseVC/*",
+          "public_header_files": "LNCommonKit/Classes/Base/BaseVC/*.h",
           "dependencies": {
             "LNCommonKit/CustomUIKit": [
 
@@ -108,13 +108,13 @@
         },
         {
           "name": "Core",
-          "source_files": "LNCommonKit/Classes/BaseMVC/Core/*",
-          "public_header_files": "LNCommonKit/Classes/BaseMVC/Core/*.h"
+          "source_files": "LNCommonKit/Classes/Base/Core/*",
+          "public_header_files": "LNCommonKit/Classes/Base/Core/*.h"
         },
         {
           "name": "TableVC",
-          "source_files": "LNCommonKit/Classes/BaseMVC/TableVC/*",
-          "public_header_files": "LNCommonKit/Classes/BaseMVC/TableVC/*.h",
+          "source_files": "LNCommonKit/Classes/Base/TableVC/*",
+          "public_header_files": "LNCommonKit/Classes/Base/TableVC/*.h",
           "dependencies": {
             "LNCommonKit/Base/BaseVC": [
 
@@ -129,8 +129,8 @@
         },
         {
           "name": "CollectionVC",
-          "source_files": "LNCommonKit/Classes/BaseMVC/TableVC/*",
-          "public_header_files": "LNCommonKit/Classes/BaseMVC/TableVC/*.h",
+          "source_files": "LNCommonKit/Classes/Base/TableVC/*",
+          "public_header_files": "LNCommonKit/Classes/Base/TableVC/*.h",
           "dependencies": {
             "LNCommonKit/Base/BaseVC": [
 
@@ -145,8 +145,8 @@
         },
         {
           "name": "DataModel",
-          "source_files": "LNCommonKit/Classes/BaseMVC/DataModel/*",
-          "public_header_files": "LNCommonKit/Classes/BaseMVC/DataModel/*.h",
+          "source_files": "LNCommonKit/Classes/Base/DataModel/*",
+          "public_header_files": "LNCommonKit/Classes/Base/DataModel/*.h",
           "dependencies": {
             "JSONModel": [
               "~>1.8.0"
@@ -155,8 +155,8 @@
         },
         {
           "name": "Provider",
-          "source_files": "LNCommonKit/Classes/Network/Provider/*",
-          "public_header_files": "LNCommonKit/Classes/Network/Provider/*.h",
+          "source_files": "LNCommonKit/Classes/Base/Provider/*",
+          "public_header_files": "LNCommonKit/Classes/Base/Provider/*.h",
           "dependencies": {
             "LNCommonKit/Base/Core": [
 
