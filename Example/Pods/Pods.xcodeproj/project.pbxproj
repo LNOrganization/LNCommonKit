@@ -319,7 +319,7 @@
 		3A0B1E89F91206CE001A0D2D502FB4F0 /* LNResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNResponse.m; path = LNCommonKit/Classes/Base/DataModel/LNResponse.m; sourceTree = "<group>"; };
 		3AD7AB3278AAC8695BF9FEC42565E1CD /* LNConsttant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNConsttant.h; path = LNCommonKit/Classes/Consttant/LNConsttant.h; sourceTree = "<group>"; };
 		3B5798F058DCD03CA70EBF24FCCFAAAF /* Pods-LNCommonKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LNCommonKit_Example-dummy.m"; sourceTree = "<group>"; };
-		3C948DA988F398432D1E74128C350AA0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3C948DA988F398432D1E74128C350AA0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3E936204557BE0E32B3F4289899AA1A2 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3E9CD29ADFC56E5F394BC2558CB10E08 /* LNBaseCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNBaseCollectionViewCell.h; path = LNCommonKit/Classes/Base/CollectionVC/LNBaseCollectionViewCell.h; sourceTree = "<group>"; };
 		3ED6C80322C3F70F2E32101B8F461B8A /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
@@ -378,7 +378,7 @@
 		6E91D3D872F157725A7CAD3CB895A23B /* UIViewController+Router.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Router.m"; path = "LNCommonKit/Classes/Router/UIViewController+Router.m"; sourceTree = "<group>"; };
 		6ECC076A2C550B741F135BD0CC311C73 /* UIViewController+Router.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Router.h"; path = "LNCommonKit/Classes/Router/UIViewController+Router.h"; sourceTree = "<group>"; };
 		6F1D2022AFF6B8EF7381C7A32E24062D /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
-		6F858FC4D01305502966FF672A902030 /* LNCommonKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LNCommonKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6F858FC4D01305502966FF672A902030 /* LNCommonKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LNCommonKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		7103DE73083A5148D77CCAFC7D248ABD /* LNSafeMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNSafeMutableDictionary.h; path = LNCommonKit/Classes/Foundation/LNSafeMutableDictionary.h; sourceTree = "<group>"; };
 		73E77A2F4A8157994872781161AB4127 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		74542FD168488321D9BB703D4319B5B6 /* Pods-LNCommonKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LNCommonKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -406,7 +406,7 @@
 		8A92611F3F257E33943AD156F80DD7EB /* Pods-LNCommonKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LNCommonKit_Example"; path = Pods_LNCommonKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AEBDC13B07AAF49AC9047BD248BB1DA /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		8AFF98B9EA1F66171A8F3CBC25C2C26D /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
-		8B31DEB6236E8AA179F414993DEEF9E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8B31DEB6236E8AA179F414993DEEF9E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C43EE287C979AB319ADDD0DDF7D44C0 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		8EFA1C4B0594094FB00040D2932E5ED4 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
 		8F63AF24ECA3DBB71719E9ECE302D475 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
@@ -419,7 +419,7 @@
 		9BC0A0451141158B473B192660D6E51C /* LNTableViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNTableViewDataSource.h; path = LNCommonKit/Classes/Base/Core/LNTableViewDataSource.h; sourceTree = "<group>"; };
 		9C3C27A44DDB8B44FC090CEC792FCEF5 /* JSONModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.release.xcconfig; sourceTree = "<group>"; };
 		9CCD5743F4427E655582F3B898653EEF /* LNListDataAdaptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNListDataAdaptor.h; path = LNCommonKit/Classes/Base/Core/LNListDataAdaptor.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DAE2D2C0903317B52E95FCD159630AF /* LNMapTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNMapTable.m; path = LNCommonKit/Classes/Foundation/LNMapTable.m; sourceTree = "<group>"; };
 		9DDE3A14BD4F35E1C8AF3B8F469DEA23 /* Pods-LNCommonKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LNCommonKit_Example.modulemap"; sourceTree = "<group>"; };
 		9E877FB7D624DCAA30965C012CAAF831 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
@@ -647,7 +647,6 @@
 				36E64A0D338639C5E53C2C2C777C0521 /* JSONValueTransformer.m */,
 				A94C34BD3D2450094C216164CA119CCB /* Support Files */,
 			);
-			name = JSONModel;
 			path = JSONModel;
 			sourceTree = "<group>";
 		};
@@ -1024,7 +1023,6 @@
 				2DECCBC1EE2D598234C3D36BA19D120A /* Support Files */,
 				A3790B595B0FED9FE77485F396208CD9 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -1081,7 +1079,6 @@
 				9E4C297DE0C65EF288A3D105D34B8E64 /* Resources */,
 				ED68940AEE9E227D5AC1D5B68638371A /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -2139,8 +2136,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
