@@ -7,7 +7,8 @@
 //
 
 #import "LNViewController.h"
-#import <LNCommonKit/LNCommonKit.h>
+#import <LNCommonKit/LNNetworkManager.h>
+#import <LNCommonKit/LNRouterHeader.h>
 
 @interface LNViewController ()
 
@@ -21,6 +22,14 @@
     
     UIViewController *vc = [self ln_currentViewController];
     NSLog(@"%@", vc);
+    
+    [LNNetworkManager startRequestCreator:^(LNHTTPRequest * _Nonnull request) {
+        
+    } succeed:^(id  _Nonnull data) {
+        
+    } failed:^(NSError * _Nonnull error) {
+        
+    }];
     
 }
 

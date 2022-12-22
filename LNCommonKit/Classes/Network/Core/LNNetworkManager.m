@@ -131,6 +131,13 @@ static void *kLNRequestIDBindingKey = &kLNRequestIDBindingKey;
                failed:(LNRequestFailureBlock)failedBlock
 {
     
+    NSAssert(request != nil, @"LNNetworkManager->Request can not be nil");
+    NSAssert(self.httpClient != nil, @"LNNetworkManager->HTTPClient can not be nil");
+    NSAssert([self.httpClient conformsToProtocol:@protocol(LNHTTPClientDelegate)], @"LNNetworkManager->HTTPClient do not conforms to protocol LNHTTPClientDelegate");
+    NSAssert(self.requestConfig != nil, @"LNNetworkManager->RequestConfig can not be nil");
+    BOOL ret = [self.requestConfig conformsToProtocol:@protocol(LNNetworkConfigAdapter)] && [self.requestConfig respondsToSelector:@selector(baseURL)];
+    NSAssert(ret, @"LNNetworkManager->RequestConfig do not conforms to protocol LNNetworkConfigAdapter");
+
     [self _configRequest:request];
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *dataTask = [self.httpClient dataTaskWithRequest:request

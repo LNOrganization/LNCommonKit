@@ -34,7 +34,7 @@
 
 + (void)load
 {
-    [LNNetworkManager sharedInstance].requestConfig = (id)self;
+    [LNNetworkManager sharedInstance].requestConfig = (id)[LNNetworkConfig sharedInstance];
     [LNNetworkManager sharedInstance].httpClient = (id)[LNCustomHTTPClient client];
 }
 
